@@ -37,5 +37,22 @@
 
 <p align="center">
   <img src="./imgs/kafka-structure-1.jpeg" width="100%">
-  <img src="./imgs/kafka-structure-2.jpeg" width="100%">
+  <img src="./imgs/kafka-structure-2.png" width="100%">
 </p>
+
+--- 
+
+## Kafka Ecosystem
+
+<p align="center">
+  <img src="./imgs/kafka-ecosystem.png" width="100%">
+</p>
+
+- 토픽에 저장된 데이터를 처리해서 다시 토픽에 넣을 때 `Streams` 라이브러리 활용
+- `Connect`는 데이터 파이프라인을 운영하는 핵심 툴
+  - `Source Connect`는 프로듀서 역할
+  - `Synk Connect`는 컨슈머 역할
+- 왜 프로듀서나 컨슈머가 아닌 `Connector`를 사용하는가>?
+  - 커넥터는 `Cluster`로 운영한다
+  - 파이프라인을 `Template` 형태로 여러 번 생서할 수 있으며, 함게 운영할 수 있다.
+  - 프로듀서와 컨슈머를 개별로 만들어 배포하는 것보다 효율적이다.
